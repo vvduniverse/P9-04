@@ -29,18 +29,18 @@ struct Flower: Shape {
 }
 
 struct ContentView: View {
-    @State private var petalOffste = -20.0
+    @State private var petalOffset = -20.0
     @State private var petalWidth = 100.0
     
     var body: some View {
         VStack {
-            Flower(petalOffset: petalOffste, petalWidth: petalWidth)
+            Flower(petalOffset: petalOffset, petalWidth: petalWidth)
                 .fill(.red, style: FillStyle(eoFill: true))
 //                .stroke(.red, lineWidth: 2)
 //                .fill(.red)
             
             Text("Offset")
-            Slider(value: $petalOffste, in: -40...40)
+            Slider(value: $petalOffset, in: -40...40)
                 .padding([.horizontal, .bottom])
             
             Text("Width")
